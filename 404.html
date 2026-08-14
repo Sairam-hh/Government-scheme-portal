@@ -454,42 +454,16 @@
         }
 
         .logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
-        }
+        height: 60px; /* navbar lo space same ga untundi */
+        display: flex;
+        align-items: center;
+        gap: 12px;}
 
-        .logo-mark {
-            width: 40px;
-            height: 40px;
-            display: grid;
-            place-items: center;
-            background: var(--rich-brown);
-            color: var(--cream);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            border-radius: 0;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
-        }
-
-        .logo-text strong {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.02rem;
-            color: var(--rich-brown);
-            font-weight: 600;
-        }
-
-        .logo-text small {
-            font-size: 0.6rem;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: var(--gold-brown);
+        .logo img {
+            height: 80px;
+            width: auto;
+            transform: scale(1.8);
+            transform-origin: center;
         }
 
         .nav {
@@ -1156,13 +1130,12 @@
             background-size: 80px 80px;"></div>
 
         <div style="position: relative; z-index: 2; text-align: center; max-width: 640px;">
-            <div style="margin-bottom: 40px; display: flex; justify-content: center;"><a class="logo" href="home.html" aria-label="Government Scheme Portal home">
-                    <span class="logo-mark" aria-hidden="true">GS</span>
-                    <span class="logo-text">
-                        <strong>Government Scheme Portal</strong>
-                        <small>Citizen Benefits</small>
-                    </span>
-                </a></div>
+            <div style="margin-bottom: 40px; display: flex; justify-content: center;">
+                <a class="logo" href="index.html" aria-label="Government Scheme Portal home">
+                <img src="./images/stackly-logo-goldbrown.webp" alt="Government Scheme Portal" width="100" height="100">
+                
+            </a>
+            </div>
 
             <div style="font-family: 'Playfair Display', serif; font-size: clamp(5rem, 18vw, 11rem); line-height: 1; color: var(--rich-brown); animation: fadeUp 0.8s var(--ease) both;">404</div>
 
