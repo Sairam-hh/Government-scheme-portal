@@ -1152,7 +1152,12 @@
 
         .side-user strong { display: block; color: var(--cream); font-size: 0.98rem; }
 
-        .side-nav { margin-top: 14px; flex: 1; }
+        .side-nav {
+            margin-top: 14px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
         .side-nav button {
             width: 100%;
@@ -1185,6 +1190,33 @@
             background: rgba(247, 241, 227, 0.12);
             border-left-color: var(--gold-brown);
             color: var(--cream);
+        }
+
+        /* ---------- LOGOUT: separated + its own hover treatment ---------- */
+        .side-logout-wrap {
+            margin-top: auto;
+            padding-top: 14px;
+            border-top: 1px solid rgba(247, 241, 227, 0.14);
+        }
+
+        .side-nav button#logoutBtn {
+            color: #E8B4A0;
+            border-left-color: transparent;
+        }
+
+        .side-nav button#logoutBtn i {
+            transition: transform 0.3s var(--ease);
+        }
+
+        .side-nav button#logoutBtn:hover {
+            background: rgba(200, 80, 60, 0.16);
+            color: #F3D9CE;
+            border-left-color: #C8503C;
+            padding-left: 30px;
+        }
+
+        .side-nav button#logoutBtn:hover i {
+            transform: translateX(3px);
         }
 
         .dash-main {
@@ -1389,9 +1421,12 @@
                 <button type="button" class="" data-panel="p-settings">
                     <i class="fa-solid fa-gear" aria-hidden="true"></i> Settings
                 </button>
-                <button type="button" id="logoutBtn">
-                    <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Logout
-                </button>
+
+                <div class="side-logout-wrap">
+                    <button type="button" id="logoutBtn">
+                        <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Logout
+                    </button>
+                </div>
             </nav>
         </aside>
 
@@ -1458,7 +1493,7 @@
                     <div class="bar-row"><span>Housing</span><span class="bar"><i style="width: 54%"></i></span><span>54%</span></div>
                     <div class="bar-row"><span>Education</span><span class="bar"><i style="width: 31%"></i></span><span>31%</span></div>
                 </div>
-                <div class="btn-row"><a class="btn" href="eligibility.html"><span>Run New Check</span></a></div>
+                <div class="btn-row"><a class="btn" href="citizen-error.html"><span>Run New Check</span></a></div>
             </section>
 
             <section class="panel" id="p-applications">
@@ -1488,7 +1523,7 @@
                     <div class="field"><label for="setState">Preferred State</label><select id="setState"><option>Maharashtra</option><option>Uttar Pradesh</option><option>Tamil Nadu</option></select></div>
                     <div class="field"><label for="setLang">Language</label><select id="setLang"><option>English</option><option>हिन्दी</option><option>मराठी</option></select></div>
                     <label class="checkline" style="letter-spacing: 0; text-transform: none; font-weight: 500;"><input type="checkbox" checked /> Email me new scheme alerts</label>
-                    <div class="btn-row"><button class="btn" type="button"><span>Save Settings</span></button></div>
+                    <div class="btn-row"><a href="citizen-error.html" class="btn" type="button"><span>Save Settings</span></a></div>
                 </div>
             </section>
 
