@@ -465,6 +465,11 @@
 
         .custom-select {
             position: relative;
+            z-index: 1;
+        }
+
+        .custom-select.open {
+            z-index: 30;
         }
 
         .custom-select-trigger {
@@ -515,7 +520,7 @@
             background: var(--white);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-md);
-            z-index: 60;
+            z-index: 100;
             box-sizing: border-box;
 
             opacity: 0;
@@ -1414,12 +1419,63 @@
             color: var(--cream);
         }
 
-        .wstep { border: none; animation: fadeUp 0.5s var(--ease) both; }
+        .wstep {
+            border: none;
+            animation: fadeUp 0.5s var(--ease) both;
+            position: relative;
+            z-index: 5;
+        }
 
         @media (max-width: 640px) {
             #progressBar { grid-template-columns: repeat(5, 1fr); }
             .pstep { font-size: 0.52rem; padding: 12px 4px; letter-spacing: 0.06em; }
         }
+
+        /* Contact List - Premium Hover Effect */
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border-left: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #d1d5db;
+}
+
+/* Icon */
+.footer-contact ul li i {
+    width: 20px;
+    min-width: 20px;
+    text-align: center;
+    color: #c9a227;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.footer-contact ul li:hover {
+    color: #fff;
+    background: rgba(201, 162, 39, 0.08);
+    border-left-color: #c9a227;
+    transform: translateX(6px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.footer-contact ul li:hover i {
+    color: #f2d675;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px rgba(201, 162, 39, 0.55));
+}
 
     </style>
 </head>
@@ -1686,14 +1742,13 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fa-solid fa-envelope"></i> &nbsp;support@schemeportal.in</li>
+                        <li><i class="fa-solid fa-envelope"></i> &nbsp;support@stacklyschemeportal.in</li>
                         <li><i class="fa-solid fa-phone"></i> &nbsp;+91 98765 43210</li>
                         <li><i class="fa-solid fa-location-dot"></i> &nbsp;Sector 12, New Delhi, India</li>
                         <li><i class="fa-solid fa-clock"></i> &nbsp;Mon – Sat, 9:00 AM – 7:00 PM</li>
-                        <li><i class="fa-solid fa-language"></i> &nbsp;English</li>
                     </ul>
                 </div>
             </div>

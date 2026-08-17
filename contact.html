@@ -1245,10 +1245,19 @@
         }
 
         /* small map fills the leftover height at the bottom of the card */
+        .contact-map-label {
+            margin-top: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--rich-brown);
+        }
+
         .contact-map {
             flex: 1;
             min-height: 140px;
-            margin-top: 20px;
+            margin-top: 10px;
             overflow: hidden;
             border: 1px solid var(--border);
         }
@@ -1383,6 +1392,52 @@
         }
 
 
+        /* Contact List - Premium Hover Effect */
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border-left: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #d1d5db;
+}
+
+/* Icon */
+.footer-contact ul li i {
+    width: 20px;
+    min-width: 20px;
+    text-align: center;
+    color: #c9a227;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.footer-contact ul li:hover {
+    color: #fff;
+    background: rgba(201, 162, 39, 0.08);
+    border-left-color: #c9a227;
+    transform: translateX(6px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.footer-contact ul li:hover i {
+    color: #f2d675;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px rgba(201, 162, 39, 0.55));
+}
+
     </style>
 </head>
 
@@ -1475,9 +1530,10 @@
                                 <i class="fa-solid fa-clock" aria-hidden="true"></i>
                                 <div><h3>Support Hours</h3><p>Monday to Saturday, 9:00 AM – 7:00 PM IST</p></div>
                             </div>
+                            <span class="contact-map-label">Our Location On Map</span>
                             <div class="contact-map">
                                 <iframe
-                                    title="Office location map"
+                                    title="Map showing Government Scheme Portal office location in New Delhi"
                                     src="https://www.openstreetmap.org/export/embed.html?bbox=77.18%2C28.56%2C77.28%2C28.65&amp;layer=mapnik"
                                     loading="lazy"
                                 ></iframe>
@@ -1651,14 +1707,13 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fa-solid fa-envelope"></i> &nbsp;support@schemeportal.in</li>
+                        <li><i class="fa-solid fa-envelope"></i> &nbsp;support@stacklyschemeportal.in</li>
                         <li><i class="fa-solid fa-phone"></i> &nbsp;+91 98765 43210</li>
                         <li><i class="fa-solid fa-location-dot"></i> &nbsp;Sector 12, New Delhi, India</li>
                         <li><i class="fa-solid fa-clock"></i> &nbsp;Mon – Sat, 9:00 AM – 7:00 PM</li>
-                        <li><i class="fa-solid fa-language"></i> &nbsp;English</li>
                     </ul>
                 </div>
             </div>
