@@ -193,6 +193,9 @@
             box-shadow: var(--shadow-sm);
             transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
                         border-color 0.4s var(--ease), background 0.4s var(--ease);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         @media (hover: hover) and (pointer: fine) {
@@ -205,6 +208,14 @@
 
         .card-body {
             padding: 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .card-cta {
+            margin-top: auto;
+            padding-top: 22px;
         }
 
         .card-media {
@@ -1395,7 +1406,50 @@
             .btn-row { gap: 12px; }
         }
 
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+.footer-contact ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border-left: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #d1d5db;
+}
+
+/* Icon */
+.footer-contact ul li i {
+    width: 20px;
+    min-width: 20px;
+    text-align: center;
+    color: #c9a227;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.footer-contact ul li:hover {
+    color: #fff;
+    background: rgba(201, 162, 39, 0.08);
+    border-left-color: #c9a227;
+    transform: translateX(6px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.footer-contact ul li:hover i {
+    color: #f2d675;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px rgba(201, 162, 39, 0.55));
+}
         
     </style>
 </head>
@@ -1516,7 +1570,7 @@
                             <p style="margin-top: 10px; font-size: 0.92rem;">Direct income support for small and marginal landholding farmer families across India.</p>
                             <div class="meta-line"><strong>Benefit</strong><span>₹6,000 per year in three instalments</span></div>
                             <div class="meta-line"><strong>Eligibility</strong><span>Landholding farmer families</span></div>
-                            <div style="margin-top: 22px;">
+                            <div class="card-cta">
                                 <a class="link-arrow" href="404.html">
                                     View Details <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -1533,7 +1587,7 @@
                             <p style="margin-top: 10px; font-size: 0.92rem;">Merit and means based scholarships for school and higher-education students.</p>
                             <div class="meta-line"><strong>Benefit</strong><span>Up to ₹75,000 per academic year</span></div>
                             <div class="meta-line"><strong>Eligibility</strong><span>Students with family income under ₹4.5L</span></div>
-                            <div style="margin-top: 22px;">
+                            <div class="card-cta">
                                 <a class="link-arrow" href="404.html">
                                     View Details <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -1550,7 +1604,7 @@
                             <p style="margin-top: 10px; font-size: 0.92rem;">Cashless secondary and tertiary hospitalisation cover at empanelled hospitals.</p>
                             <div class="meta-line"><strong>Benefit</strong><span>₹5 lakh cover per family per year</span></div>
                             <div class="meta-line"><strong>Eligibility</strong><span>Deprivation criteria households</span></div>
-                            <div style="margin-top: 22px;">
+                            <div class="card-cta">
                                 <a class="link-arrow" href="404.html">
                                     View Details <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -1567,7 +1621,7 @@
                             <p style="margin-top: 10px; font-size: 0.92rem;">Short-term skilling, certification and placement support for youth entering the workforce.</p>
                             <div class="meta-line"><strong>Benefit</strong><span>Free training + placement assistance</span></div>
                             <div class="meta-line"><strong>Eligibility</strong><span>Youth aged 18 to 35 years</span></div>
-                            <div style="margin-top: 22px;">
+                            <div class="card-cta">
                                 <a class="link-arrow" href="404.html">
                                     View Details <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -1584,7 +1638,7 @@
                             <p style="margin-top: 10px; font-size: 0.92rem;">Financial assistance to build a pucca house with basic amenities for eligible households.</p>
                             <div class="meta-line"><strong>Benefit</strong><span>Up to ₹2.67 lakh interest subsidy</span></div>
                             <div class="meta-line"><strong>Eligibility</strong><span>Households without a pucca house</span></div>
-                            <div style="margin-top: 22px;">
+                            <div class="card-cta">
                                 <a class="link-arrow" href="404.html">
                                     View Details <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -1601,7 +1655,7 @@
                             <p style="margin-top: 10px; font-size: 0.92rem;">Collateral-free credit, mentoring and market linkage for women-led micro enterprises.</p>
                             <div class="meta-line"><strong>Benefit</strong><span>Loans up to ₹10 lakh at subsidised rates</span></div>
                             <div class="meta-line"><strong>Eligibility</strong><span>Women entrepreneurs above 18</span></div>
-                            <div style="margin-top: 22px;">
+                            <div class="card-cta">
                                 <a class="link-arrow" href="404.html">
                                     View Details <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -1623,7 +1677,7 @@
                         <img src="./images/support.webp" alt="Officer assisting a citizen at a help desk" loading="lazy" width="1200" height="900" />
                     </div>
                     <div class="split-content reveal right">
-                        <span class="eyebrow">Why Government Scheme Portal</span>
+                        <span class="eyebrow">Why Stackly Government Scheme Portal</span>
                         <h2>One Platform. Better Access.</h2>
                         <p style="margin-top: 14px;">
                             Public benefits fail when information is scattered. We consolidate
@@ -1854,9 +1908,9 @@
                             <h3>Ramesh Patil</h3>
                             <span class="lbl" style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-brown);">Maharashtra · PM Kisan</span>
                             <p class="story-quote" style="margin-top: 14px;">
-                                “I never knew instalments were pending in my name. The portal
+                                "I never knew instalments were pending in my name. The portal
                                 explained the criteria clearly and I completed the correction
-                                at the village centre in one visit.”
+                                at the village centre in one visit."
                             </p>
                         </div>
                     </article>
@@ -1866,8 +1920,8 @@
                             <h3>Anjali Verma</h3>
                             <span class="lbl" style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-brown);">Uttar Pradesh · Scholarship</span>
                             <p class="story-quote" style="margin-top: 14px;">
-                                “The document checklist saved my application. I submitted before
-                                the deadline and my tuition was covered for the full year.”
+                                "The document checklist saved my application. I submitted before
+                                the deadline and my tuition was covered for the full year."
                             </p>
                         </div>
                     </article>
@@ -1877,8 +1931,8 @@
                             <h3>Kamla Devi</h3>
                             <span class="lbl" style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-brown);">Rajasthan · Old Age Pension</span>
                             <p class="story-quote" style="margin-top: 14px;">
-                                “My grandson checked eligibility here and we understood the
-                                pension amount and renewal dates without asking any agent.”
+                                "My grandson checked eligibility here and we understood the
+                                pension amount and renewal dates without asking any agent."
                             </p>
                         </div>
                     </article>
@@ -1983,20 +2037,19 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fa-solid fa-envelope"></i> &nbsp; support@stacklyschemeportal.in</li>
+                        <li><i class="fa-solid fa-envelope"></i> &nbsp;support@stacklyschemeportal.in</li>
                         <li><i class="fa-solid fa-phone"></i> &nbsp;+91 98765 43210</li>
                         <li><i class="fa-solid fa-location-dot"></i> &nbsp;Sector 12, New Delhi, India</li>
                         <li><i class="fa-solid fa-clock"></i> &nbsp;Mon – Sat, 9:00 AM – 7:00 PM</li>
-                        <li><i class="fa-solid fa-language"></i> &nbsp;English</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <span>&copy; 2026 Government Scheme Portal. All rights reserved.</span>
+                <span>&copy; 2026 Stackly Government Scheme Portal. All rights reserved.</span>
                 <span> <a href="404.html">Privacy  Policy</a> | <a href="404.html">Terms &amp; Conditions</a></span>
             </div>
         </div>
